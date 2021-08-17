@@ -21,26 +21,26 @@ pipeline {
             '''
             }
         }
-        stage('DOCKER LOGIN') {
-        steps {
-            sh '''
-                echo  $DOCKER_HUB_TOKEN | docker login --username $DOCKER_HUB_USERNAME --password-stdin
-            '''
-            }
-        }
-    stage('DOCKER PUSH') {
-        steps {
-            sh '''
-                docker push $DOCKER_HUB_USERNAME/$IMAGE_NAME:$TAG
-            '''
-            }
-        }
-    stage('DOCKER LOGOUT') {
-        steps {
-            sh '''
-                docker logout
-            '''
-            }
-        }
+//         stage('DOCKER LOGIN') {
+//         steps {
+//             sh '''
+//                 echo  $DOCKER_HUB_TOKEN | docker login --username $DOCKER_HUB_USERNAME --password-stdin
+//             '''
+//             }
+//         }
+//     stage('DOCKER PUSH') {
+//         steps {
+//             sh '''
+//                 docker push $DOCKER_HUB_USERNAME/$IMAGE_NAME:$TAG
+//             '''
+//             }
+//         }
+//     stage('DOCKER LOGOUT') {
+//         steps {
+//             sh '''
+//                 docker logout
+//             '''
+//             }
+//         }
     }
 }
