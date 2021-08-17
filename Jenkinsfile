@@ -1,8 +1,8 @@
 pipeline {
     agent any
     environment {
-        DOCKER_HUB_USERNAME = credentials('DOCKER_HUB_USERNAME')
-        DOCKER_HUB_TOKEN = credentials('DOCKER_HUB_TOKEN')
+        DOCKER_HUB_USERNAME = "xxxx" // credentials('DOCKER_HUB_USERNAME')
+//         DOCKER_HUB_TOKEN = credentials('DOCKER_HUB_TOKEN')
         IMAGE_NAME="java-api"
         TAG="V-${BUILD_ID}"
     }
