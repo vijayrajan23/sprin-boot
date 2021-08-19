@@ -237,7 +237,7 @@ public class AES
 	        HttpHeaders headers = new HttpHeaders();
 	        headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
 	        entity = new HttpEntity<String>(headers);
-	        return restTemplate.exchange("http://210.18.134.54/RCMS/icic_test_api.php", HttpMethod.GET, entity, String.class).getBody();
+	        return restTemplate.exchange("http://192.168.5.207/RCMS/icic_test_api.php", HttpMethod.GET, entity, String.class).getBody();
 	     }
 	    
 
@@ -265,7 +265,7 @@ public class AES
 	    	map.add("response", gsonresponse.toJson(staticvalues));
 	    	HttpEntity<MultiValueMap<String, Object>> request = new HttpEntity<MultiValueMap<String, Object>>(map, headers);
 
-	    	returnvariable = restTemplate.exchange("http://210.18.134.54/RCMS/icic_test_api1.php", HttpMethod.POST, request, String.class).getBody();
+	    	returnvariable = restTemplate.exchange("http://192.168.5.207/RCMS/icic_test_api1.php", HttpMethod.POST, request, String.class).getBody();
 	    	
 	    //	returnvariable = restTemplate.exchange("https://apibankingsandbox.icicibank.com/api/v1/TransactionsReportingforDSB", HttpMethod.POST, request, String.class).getBody();
 
